@@ -1,0 +1,95 @@
+﻿    <button style="margin:5px; display:none" class="btn btn-outline-info" id="btnZaposleni" >Zaposleni</button>
+<div class="row" style="margin: 0 auto;">
+    @*<button style="margin:5px;" class="btn btn-success" id="btnLoginOrRegister">Log in or Register</button>*@
+    <p id="user">Korisnik nije prijavljen na sistem</p>
+    <br /><br /><br />
+    <button class="btn btn-primary" id="btnLogOut" style="color:black; background-color:yellow;">Odjava</button>
+</div>
+
+<div id="sve">
+    <div class="row">
+        <div id="divLogin" style="margin: 0 auto;">
+            <h3>Prijava korisnika</h3>
+            <p id="message"></p>
+            <form method="post" action="post/" id="loginForm">
+                <label>Email adresa:</label><br />
+                <input type="text" id="loginEmail" /><br />
+                <label>Lozinka :</label><br />
+                <input type="password" id="loginPassword" /><br /> <br />
+                <button type="submit" class="btn btn-primary" style="color:black; background-color:yellow;">Prijava</button>
+                <br />
+                <br />
+                <button type="reset" class="btn btn-primary"  style="color:black; background-color:white;" id="odustajanjeLog">Odustajanje</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div id="divRegistration" style="margin: 0 auto;">
+            <h3>Registracija korisnika</h3>
+            <form method="post" action="post/" id="registerForm">
+                <label>Email:</label><br />
+                <input type="text" id="registerEmail" /><br />
+                <label>Password:</label><br />
+                <input type="password" id="registerPassword" /><br />
+                <br />
+                <button type="submit" class="btn btn-primary" style="color:black; background-color:yellow;">Registracija</button>
+                <br />
+                <br />
+                <button type="reset" class="btn btn-primary"  style="color:black; background-color:white;" id="odustajanjeReg">Odustajanje</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-inline" id="LoginOrRegisterDiv" style="margin: 0 auto;">
+            <button style="background-color:yellow; border-color:black; margin:5px;" class="btn" id="btnLogin">Prijava</button>
+            <br />
+            <br />
+            <button style="border-color:black;  margin:5px;" class="btn" id="btnRegister">Registracija</button>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div id="divZaposleni" style="margin: 0 auto;">
+            <form method="post" action="post/" id="pretragaForm">
+                <h3>Pretraga zaposlenih po plati</h3>
+                <label>Najmanje: </label><br />
+                <input type="text" id="najmanje" /><br />
+                <label>Najvise: </label><br />
+                <input type="text" id="najvise" /><br /><br />
+                <button type="submit" class="btn btn-primary" style="color: black; background-color: yellow;">Trazi</button>
+                <br />
+            </form>
+            <div id="zaposleniTable"></div>
+            <div style="display:flex;">
+                <form method="post" action="post/" id="zaposleniForm" style="margin:0 auto;">
+                    <h3>Add new or edit</h3>
+                    <label>Organizaciona Jedinica:</label><br />
+                    <select id="jedinica"></select><br />
+                    <label>Rola:</label><br />
+                    <input type="text" id="rola" /><br />
+                    <label>Ime i prezime:</label><br />
+                    <input type="text" id="ImeIPrezime" /><br />
+                    <label>Godina Rodjenja:</label><br />
+                    <input type="text" id="godinaRodjenja" /><br />
+                    <label>Godina Zaposlenja:</label><br />
+                    <input type="text" id="godinaZaposlenja" /><br />
+                    <label>Plata:</label><br />
+                    <input type="text" id="plata" /><br /><br />
+                    <button type="submit" class="btn btn-primary" style="color:black; background-color:yellow;">Dodavanje</button>
+                    <br />
+                    <br />
+                    <button type="reset" class="btn btn-primary" style="color:black; background-color:white;">Odustajanje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Skripta.js"></script>
+}
